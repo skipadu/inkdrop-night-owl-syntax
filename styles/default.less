@@ -35,8 +35,9 @@
   .CodeMirror-matchingbracket,
   .CodeMirror-matchingtag {
     // When you click a tag/bracket and the matching one is highlighted
-    background: @base03 !important;
-    border-bottom: 1px solid @base08 !important;
+    background: @matchingbracketbg !important;
+    border: 1px solid @matchingbracketborder !important;
+    color: @foreground !important;
   }
   .CodeMirror-foldgutter-open:after {
     // Those little arrows in the gutter
