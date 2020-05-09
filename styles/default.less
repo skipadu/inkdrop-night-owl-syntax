@@ -1,11 +1,10 @@
-@import "./colors";
+@import './colors';
 
 .editor {
-
   .CodeMirror {
     // Background color of main window
     background-color: @background;
-    color: @base02;
+    color: @foreground;
   }
   .CodeMirror-scroll {
     // Color of otherwise un-styled text
@@ -17,20 +16,21 @@
   }
   .CodeMirror-linenumber {
     // Line numbers in the gutter
-    color: @base03;
+    color: @linenumber;
     opacity: 0.6;
   }
   .CodeMirror-selected {
     // Highlighed text
-    background-color: @base05;
+    background-color: @selected;
   }
   .CodeMirror-focused .CodeMirror-selected {
     // Highlighed text
-    background-color: @base04;
+    background-color: @focusedselected;
   }
   .CodeMirror-cursor {
     // The cursor
-    border-left: 1px solid @base00;
+    border-left: 1px solid @cursor;
+    border-right: 1px solid @cursor;
   }
   .CodeMirror-matchingbracket,
   .CodeMirror-matchingtag {
@@ -40,55 +40,62 @@
   }
   .CodeMirror-foldgutter-open:after {
     // Those little arrows in the gutter
-    color: @base03;
+    color: @fold;
   }
   .CodeMirror-foldgutter-folded:after {
     // The arrows after you collapse code
-    color: @base03;
+    color: @fold;
   }
   .CodeMirror.over-gutter,
   .CodeMirror-activeline {
     .CodeMirror-foldgutter-open:after {
       // Arrows when hovering on the gutter
-      color: @base03;
+      color: @fold;
     }
   }
   .CodeMirror-foldmarker {
     // The [...] marking collapsed code
-    border-color: @base03;
-    background-color: @base03;
-    color: @base02;
+    border-color: @fold;
+    background-color: @fold;
+    color: @folddarker;
   }
   .CodeMirror .CodeMirror-linewidget img.inline-widget {
-    background: rgba(0,0,0,0.05);
+    background: rgba(0, 0, 0, 0.05);
   }
   .CodeMirror-searching {
     // Ctrl + F results
-    background-color: @base0D;
+    background-color: @search;
     // Selected result
     &.searching-current-match {
-      background-color: @base0C;
+      background-color: @search;
     }
   }
-
-  /* All 'dem swatches */
 
   .CodeMirror {
     .cm-atom,
     .cm-formatting-list.cm-variable-3 {
       color: @base0C;
     }
-
-    .cm-keyword,
-    .cm-formatting-list.cm-variable-2 {
+    .cm-keyword {
       color: @keyword;
     }
-
+    .cm-formatting-list.cm-variable-2 {
+      color: @foreground;
+    }
+    .list-line .cm-variable-2 {
+      color: @foreground;
+    }
+    .list-line .cm-keyword {
+      color: @foreground;
+    }
     .cm-url,
     .cm-string,
     .cm-string-2,
     .cm-hr {
       color: @string;
+    }
+    .cm-url {
+      color: @cmurl;
     }
     .cm-number,
     .cm-attribute,
@@ -104,7 +111,12 @@
     .cm-variable {
       color: @variable;
     }
-    .cm-operator,
+    .cm-variable-2 {
+      color: @foreground;
+    }
+    .cm-operator {
+      color: @cmoperator;
+    }
     .cm-meta,
     .cm-bracket {
       color: @base0E;
@@ -143,7 +155,9 @@
       color: @base04;
       opacity: 0.4;
     }
-    .cm-formatting-quote, .cm-formatting-strong, .cm-formatting-em {
+    .cm-formatting-quote,
+    .cm-formatting-strong,
+    .cm-formatting-em {
       opacity: 0.6;
     }
     .cm-formatting-link {
@@ -158,30 +172,38 @@
     .cm-em {
       color: @base0C;
     }
+    .cm-searching {
+      background-color: @search;
+    }
 
     // carriage return
-    .CodeMirror-code > div > pre > span::after, .CodeMirror-line > span::after {
+    .CodeMirror-code > div > pre > span::after,
+    .CodeMirror-line > span::after {
       color: @base00;
       opacity: 0.4;
     }
 
     .cm-inline-code {
       background: rgba(0, 0, 0, 0.02);
-      color: @base03;
+      color: @inlinecode;
     }
 
     .gfm-codeblock-bg.CodeMirror-linebackground {
       background: rgba(0, 0, 0, 0.01);
     }
+    .gfm-codeblock.CodeMirror-line .cm-variable-2 {
+      color: @variable;
+    }
 
-    .cm-table-sep, .table-row.table-row-1 {
+    .cm-table-sep,
+    .table-row.table-row-1 {
       color: @base0E;
     }
   }
 
   /* Active Line Highlight support */
-  .CodeMirror-activeline-background, .CodeMirror-activeline-gutter {
-    // background-color: fade(@base06, 70%) !important;
+  .CodeMirror-activeline-background,
+  .CodeMirror-activeline-gutter {
     background-color: @highlightrow !important;
   }
 }
