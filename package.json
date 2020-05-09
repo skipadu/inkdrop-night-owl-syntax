@@ -1,0 +1,10 @@
+{
+  "name": "night-owl-syntax",
+  "description": "Night Owl syntax theme",
+  "version": "1.0.0",
+  "theme": "syntax",
+  "styleSheets": ["default.less"],
+  "engines": {
+    "inkdrop": "^4.x"
+  }
+}
