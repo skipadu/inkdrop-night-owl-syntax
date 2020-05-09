@@ -4,16 +4,16 @@
 
   .CodeMirror {
     // Background color of main window
-    background-color: #FFFFFF;
+    background-color: @background;
     color: @base02;
   }
   .CodeMirror-scroll {
     // Color of otherwise un-styled text
-    color: @base02;
+    color: @foreground;
   }
   .CodeMirror-gutters {
     // Gutter to the left
-    background-color: #FFFFFF;
+    background-color: @background;
   }
   .CodeMirror-linenumber {
     // Line numbers in the gutter
@@ -81,26 +81,28 @@
 
     .cm-keyword,
     .cm-formatting-list.cm-variable-2 {
-      color: @base0A;
+      color: @keyword;
     }
 
     .cm-url,
     .cm-string,
     .cm-string-2,
     .cm-hr {
-      color: @base09;
+      color: @string;
     }
     .cm-number,
     .cm-attribute,
     .cm-plus {
       color: @base0A;
     }
-    .cm-def,
+    .cm-def {
+      color: @def;
+    }
     .cm-property {
-      color: @base0C;
+      color: @property;
     }
     .cm-variable {
-      color: @base0A;
+      color: @variable;
     }
     .cm-operator,
     .cm-meta,
@@ -108,7 +110,7 @@
       color: @base0E;
     }
     .cm-comment {
-      color: @base04;
+      color: @comment;
       font-style: italic;
     }
     .cm-error,
@@ -122,7 +124,7 @@
       color: @base0A;
     }
     .cm-link {
-      color: @base0E;
+      color: @link;
       text-underline-position: under;
     }
     .cm-rangeinfo {
@@ -143,6 +145,12 @@
     }
     .cm-formatting-quote, .cm-formatting-strong, .cm-formatting-em {
       opacity: 0.6;
+    }
+    .cm-formatting-link {
+      color: @formattinglink;
+    }
+    .cm-formatting-link-string {
+      color: @formattinglinkstring;
     }
     .cm-strong {
       color: @base0B;
@@ -173,6 +181,7 @@
 
   /* Active Line Highlight support */
   .CodeMirror-activeline-background, .CodeMirror-activeline-gutter {
-    background-color: fade(@base06, 70%) !important;
+    // background-color: fade(@base06, 70%) !important;
+    background-color: @highlightrow !important;
   }
 }
