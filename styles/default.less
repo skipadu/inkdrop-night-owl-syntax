@@ -98,8 +98,12 @@
     .cm-url {
       color: @cmurl;
     }
-    .cm-number,
-    .cm-attribute,
+    .cm-number {
+      color: @cmnumber;
+    }
+    .cm-attribute {
+      color: @cmattribute;
+    }
     .cm-plus {
       color: @base0A;
     }
@@ -118,9 +122,11 @@
     .cm-operator {
       color: @cmoperator;
     }
-    .cm-meta,
-    .cm-bracket {
+    .cm-meta {
       color: @base0E;
+    }
+    .cm-bracket {
+      color: @cmbracket;
     }
     .cm-comment {
       color: @comment;
@@ -144,16 +150,21 @@
       color: @base0C;
     }
     .cm-qualifier,
-    .cm-builtin,
-    .cm-tag {
+    .cm-builtin {
       color: @base08;
     }
+    .cm-tag {
+      color: @cmtag;
+    }
+    .cm-tag.cm-bracket {
+      color: @cmbracket;
+    }
     .cm-quote {
-      color: @base0F;
+      color: @cmquote;
       font-style: italic;
     }
     .cm-whitespace::before {
-      color: @base04;
+      color: @cmwhitespace;
       opacity: 0.4;
     }
     .cm-formatting-quote,
