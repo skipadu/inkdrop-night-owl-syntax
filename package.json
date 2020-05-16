@@ -1,9 +1,11 @@
 {
   "name": "night-owl-syntax",
   "description": "Night Owl syntax theme",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "theme": "syntax",
-  "styleSheets": ["default.less"],
+  "styleSheets": [
+    "default.less"
+  ],
   "repository": "https://github.com/skipadu/inkdrop-night-owl-syntax",
   "author": {
     "name": "Sami Korpela"
