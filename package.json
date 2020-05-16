@@ -4,6 +4,11 @@
   "version": "0.0.0",
   "theme": "syntax",
   "styleSheets": ["default.less"],
+  "repository": "https://github.com/skipadu/inkdrop-night-owl-syntax",
+  "author": {
+    "name": "Sami Korpela"
+  },
+  "license": "MIT",
   "engines": {
     "inkdrop": "^4.x"
   }
