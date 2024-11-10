@@ -1,10 +1,10 @@
 {
   "name": "night-owl-syntax",
   "description": "Night Owl syntax theme",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "theme": "syntax",
   "styleSheets": [
-    "default.less"
+    "index.css"
   ],
   "repository": "https://github.com/skipadu/inkdrop-night-owl-syntax",
   "author": {
@@ -12,6 +12,6 @@
   },
   "license": "MIT",
   "engines": {
-    "inkdrop": "^4.x"
+    "inkdrop": "^5.x"
   }
 }
